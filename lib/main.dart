@@ -16,6 +16,22 @@ class LabClass05 extends StatelessWidget {
         drawer: Drawer(
           child: ListView(
             children: [
+              DrawerHeader(
+                child: Row(
+                  mainAxisAlignment:MainAxisAlignment.spaceBetween,
+                  children: [
+                    Icon(
+                      Icons.home,
+                      size: 60,
+                      color: Color.fromARGB(228, 7, 7, 237),
+                    ),
+                    TextButton(
+                      onPressed:(), 
+                      child:Icons.close),
+                  ],
+
+              ),
+              ),
               ListTile(
                 leading: Icon(Icons.image),
                 title: text("Image"),
