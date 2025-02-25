@@ -8,6 +8,16 @@ class MyWidget extends StatefulWidget {
 }
 
 class _MyWidgetState extends State<MyWidget> {
+  int currentIndex = 1;
+  final List<Widget> page = [
+    Text("Home"),
+    Text("Profile"),
+  ];
+  void onClikMenu(int index){
+    setState(() {
+      currentIndex=index;
+    });
+  };
   @override
   Widget build(BuildContext context) {
     return Scaffold(
