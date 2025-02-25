@@ -12,7 +12,19 @@ class LabClass05 extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Basic Flutter UI-02',
-      home: Scaffold(
+      home: Scaffold(bottomNavigationBar: BottomNavigationBar(
+          items: [
+            BottomNavigationBarItem(
+              icon: Icon( Icons.man)
+              ),BottomNavigationBarItem(
+              icon: Icon( Icons.woman)
+              ),
+              BottomNavigationBarItem(
+              icon: Icon( Icons.gif)
+              ),
+          ],
+        
+          ),
         drawer: Drawer(
           child: ListView(
             children: [
@@ -26,20 +38,20 @@ class LabClass05 extends StatelessWidget {
                       color: Color.fromARGB(228, 7, 7, 237),
                     ),
                     TextButton(
-                      onPressed:(), 
-                      child:Icons.close),
+                      onPressed:(){} , 
+                      child:Icon(Icons.close)),
                   ],
 
               ),
               ),
               ListTile(
                 leading: Icon(Icons.image),
-                title: text("Image"),
+                title: Text("Image"),
                 onTap: () {},
               ),
               ListTile(
                 leading: Icon(Icons.settings),
-                title: text("Settings"),
+                title: Text("Settings"),
                 onTap: () {},
               ),
             ],
@@ -53,7 +65,7 @@ class LabClass05 extends StatelessWidget {
         body: Column(
           children: [
             CachedNetworkImage(
-              imageUrl: "https://images.unsplash.com/photo-1470770841072-f978cf4d019e?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D")
+              imageUrl: "https://images.unsplash.com/photo-1470770841072-f978cf4d019e?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"),
               Image.network(
               "https://images.unsplash.com/photo-1470770841072-f978cf4d019e?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
             ),
