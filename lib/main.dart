@@ -13,16 +13,32 @@ class LabClass05 extends StatelessWidget {
     return MaterialApp(
       title: 'Basic Flutter UI-02',
       home: Scaffold(
+        drawer: Drawer(
+          child: ListView(
+            children: [
+              ListTile(
+                leading: Icon(Icons.image),
+                title: text("Image"),
+                onTap: () {},
+              ),
+              ListTile(
+                leading: Icon(Icons.settings),
+                title: text("Settings"),
+                onTap: () {},
+              ),
+            ],
+          ),
+        ),
         appBar: AppBar(
           title: Text("Basic Flutter UI-02"),
           backgroundColor: const Color.fromARGB(255, 21, 59, 224),
           centerTitle: true,
         ),
-        body: Row(
+        body: Column(
           children: [
             CachedNetworkImage(
               imageUrl: "https://images.unsplash.com/photo-1470770841072-f978cf4d019e?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D")
-            Image.network(
+              Image.network(
               "https://images.unsplash.com/photo-1470770841072-f978cf4d019e?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
             ),
           ],
